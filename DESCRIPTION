@@ -1,0 +1,16 @@
+Package: grimoire
+Title: Grimoire (WeirdDataScience Personal Package)
+Version: 0.0.2
+Authors@R: 
+    person(given = "Joss",
+           family = "Wright",
+           role = c("aut", "cre"),
+           email = "joss@weirddatascience.net",
+           comment = "")
+Description: Personal functions for use in WeirdDataScience and related projects.
+License: None
+Encoding: UTF-8
+LazyData: true
+Imports:
+	ggplot2, ggthemes, cowplot, magrittr
+RoxygenNote: 7.0.2

@@ -1,6 +1,6 @@
 Package: grimoire
 Title: Grimoire (WeirdDataScience Personal Package)
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person(given = "Joss",
            family = "Wright",

@@ -7,9 +7,10 @@
 decorate_plot(
   title,
   subtitle = "http://www.weirddatascience.net | @WeirdDataSci",
+  footer,
   plot,
   bg_image,
-  footer
+  rel_heights = c(0.1, 1, 0.05)
 )
 }
 \arguments{
@@ -17,11 +18,13 @@ decorate_plot(
 
 \item{subtitle}{Subtitle text for the plot.}
 
+\item{footer}{Footer text, for references and acknowledgements.}
+
 \item{plot}{ggplot plot object to centralize.}
 
 \item{bg_image}{Path to a background image for the page. This will span the entire plot without borders.}
 
-\item{footer}{Footer text, for references and acknowledgements.}
+\item{rel_heights}{Array of relative heights for the title, subtitle, and footer sections. Defaults to c(0.1, 1, 0.05).}
 }
 \description{
 Decorate a ggplot with title, subtitle, footer reference text and full-page background image.

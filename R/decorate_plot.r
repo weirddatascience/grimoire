@@ -4,9 +4,10 @@
 #' This makes use of the cowplot package to strip apart the basic ggplot object and recombine it into a presentation-ready image.
 #' @param title Title text for the plot.
 #' @param subtitle Subtitle text for the plot.
+#' @param footer Footer text, for references and acknowledgements.
 #' @param plot ggplot plot object to centralize.	
 #' @param bg_image Path to a background image for the page. This will span the entire plot without borders.
-#' @param footer Footer text, for references and acknowledgements.
+#' @param rel_heights Array of relative heights for the title, subtitle, and footer sections. Defaults to c(0.1, 1, 0.05).
 #' @keywords plot
 #' @export
 #' @examples
@@ -16,9 +17,10 @@
  
 decorate_plot <- function( title, 
 								  	subtitle="http://www.weirddatascience.net | @WeirdDataSci", 
+									footer,
 									plot, 
 									bg_image, 
-									footer ) {
+									rel_heights = c( 0.1, 1, 0.05 ) ) {
 
 	# Cowplot trick for ggtitle
 	plot_title <- 
@@ -46,7 +48,7 @@ decorate_plot <- function( title,
 	combined_plot <- 
 		cowplot::plot_grid( 	plot_title, 
 								 	plot, data_label, 
-									ncol=1, rel_heights=c(0.1, 1, 0.1) ) 
+									ncol=1, rel_heights=rel_heights ) 
 
 	decorated_plot <- 
 		cowplot::ggdraw() +

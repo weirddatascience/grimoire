@@ -7,7 +7,7 @@
 #' @param footer Footer text, for references and acknowledgements.
 #' @param plot ggplot plot object to centralize.	
 #' @param bg_image Path to a background image for the page. This will span the entire plot without borders.
-#' @param rel_heights Array of relative heights for the title, subtitle, and footer sections. Defaults to c(0.1, 1, 0.05).
+#' @param rel_heights Array of relative heights for the title, plot, and footer sections. Defaults to c(0.1, 1, 0.05).
 #' @keywords plot
 #' @export
 #' @examples

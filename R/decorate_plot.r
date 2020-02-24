@@ -15,11 +15,11 @@
 #' gp <- ggplot( df, aes(x=x, y=y) ) + geom_point()
 #' dp <- decorate_plot( "Plot Title", "Weird Data Science", gp, "Data: Normal Distribution" )
  
-decorate_plot <- function( title, 
+decorate_plot <- function( title = NULL, 
 								  	subtitle="http://www.weirddatascience.net | @WeirdDataSci", 
-									footer,
+									footer = NULL,
 									plot, 
-									bg_image, 
+									bg_image = NULL, 
 									rel_heights = c( 0.1, 1, 0.05 ) ) {
 
 	# Cowplot trick for ggtitle
@@ -50,9 +50,17 @@ decorate_plot <- function( title,
 								 	plot, data_label, 
 									ncol=1, rel_heights=rel_heights ) 
 
-	decorated_plot <- 
-		cowplot::ggdraw() +
-		cowplot::draw_image( bg_image, scale=1.4 ) +
-		cowplot::draw_plot( combined_plot )
+	# Add the background image if it has been specified.
+	if( !is.null( bg_image ) ) {
+		decorated_plot <- 
+			cowplot::ggdraw() +
+			cowplot::draw_image( bg_image, scale=1.4 ) +
+			cowplot::draw_plot( combined_plot )
+	} else {
+		decorated_plot <-
+			combined_plot
+	}
+
+	return( decorated_plot )
 
 }

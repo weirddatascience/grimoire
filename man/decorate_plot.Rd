@@ -5,11 +5,11 @@
 \title{Decorate Plot Function}
 \usage{
 decorate_plot(
-  title,
+  title = NULL,
   subtitle = "http://www.weirddatascience.net | @WeirdDataSci",
-  footer,
+  footer = NULL,
   plot,
-  bg_image,
+  bg_image = NULL,
   rel_heights = c(0.1, 1, 0.05)
 )
 }

@@ -4,12 +4,14 @@
 # Taken from <https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2>
 #' @export
 weird_colours <- c(
-						 `weird blue`	=	"#0b6788",
-						 `blood` 		=	"#8a0707", 	# (Pantone "Blood")
-						 `ufo green` 	=  "#3cd070", 	# (Pantone "UFO Green")
-						 `ink` 			=	"#3c3f4a", 	# (Pantone "India Ink")
-						 `dark grey` 	=	"#222222", 	
-						 `light grey` 	=	"#eeeeee" 	
+						 `weird blue`		=	"#0b6788",
+						 `blood red`		=	"#8a0707", 	# (Pantone "Blood")
+						 `ufo green` 		=  "#3cd070", 	# (Pantone "UFO Green")
+						 `ink grey` 		=	"#3c3f4a", 	# (Pantone "India Ink")
+						 `pumpkin orange`	=	"#ff7518", 	# (Maerz and Paul "A Dictionary of Color". 1930)
+						 `midnight blue`	=	"#061229", 	
+						 `dark grey` 		=	"#222222", 	
+						 `light grey` 		=	"#eeeeee" 	
 						 )
 
 #' Extract Weird Data Science colours as hex codes
@@ -30,7 +32,7 @@ weird_cols <- function(...) {
 }
 
 weird_palettes <- list(
-							  `weird`  = weird_cols("weird blue", "blood", "ufo green", "ink")
+							  `weird`  = weird_cols("weird blue", "blood red", "ufo green", "ink grey", "pumpkin orange" )
 )
 
 #' Interpolate a weird data science color palette

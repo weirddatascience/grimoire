@@ -10,6 +10,7 @@ decorate_plot(
   footer = NULL,
   plot,
   bg_image = NULL,
+  decorate_theme = NULL,
   rel_heights = c(0.1, 1, 0.05)
 )
 }
@@ -25,6 +26,8 @@ decorate_plot(
 \item{bg_image}{Path to a background image for the page. This will span the entire plot without borders.}
 
 \item{rel_heights}{Array of relative heights for the title, plot, and footer sections. Defaults to c(0.1, 1, 0.05).}
+
+\item{theme}{A theme object to use in constructing the titles and footer.}
 }
 \description{
 Decorate a ggplot with title, subtitle, footer reference text and full-page background image.

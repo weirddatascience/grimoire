@@ -10,6 +10,7 @@ weird_colours <- c(
 						 `ink grey` 		=	"#3c3f4a", 	# (Pantone "India Ink")
 						 `pumpkin orange`	=	"#ff7518", 	# (Maerz and Paul "A Dictionary of Color". 1930)
 						 `midnight blue`	=	"#061229", 	
+						 `purpureus`		=	"#9A4EAE",	# (Pantone "Purpureus")
 						 `dark grey` 		=	"#222222", 	
 						 `light grey` 		=	"#eeeeee" 	
 						 )
@@ -32,7 +33,7 @@ weird_cols <- function(...) {
 }
 
 weird_palettes <- list(
-							  `weird`  = weird_cols("weird blue", "blood red", "ufo green", "ink grey", "pumpkin orange" )
+							  `weird`  = weird_cols("weird blue", "blood red", "ufo green", "ink grey", "pumpkin orange", "purpureus" )
 )
 
 #' Interpolate a weird data science color palette

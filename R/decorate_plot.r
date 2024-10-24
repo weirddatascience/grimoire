@@ -6,6 +6,10 @@
 #' @param subtitle Subtitle text for the plot.
 #' @param footer Footer text, for references and acknowledgements.
 #' @param plot ggplot plot object to centralize.	
+#' @param title_colour Colour for the plot title. 
+#' @param subtitle_colour Colour for the plot subtitle. Defaults to the same as the title.
+#' @param footer_colour Colour for the plot footer. Defaults to the same as the title.
+#' @param title_colour Colour for the plot title. 
 #' @param bg_colour Background colour for the plot. If given, this will override the main plot's background by setting it to be transparent, and cause this colour to span the entire plot without borders. Note that this argument will override any \code{plot.background} or \code{panel.background} settings in the \code{decorate_theme} argument.
 #' @param bg_image Path to a background image for the page. This will span the entire plot without borders.
 #' @param theme A theme object to use in constructing the titles and footer.
@@ -21,6 +25,9 @@ decorate_plot <- function( plot,
 								  	title = NULL, 
 								  	subtitle="http://www.weirddatascience.net | @WeirdDataSci", 
 									footer = NULL,
+									title_colour = "#3c3f4a",
+									subtitle_colour = title_colour,
+									footer_colour = title_colour,
 									bg_colour = NULL,
 									bg_image = NULL,
 									decorate_theme = NULL,
@@ -42,14 +49,14 @@ decorate_plot <- function( plot,
 		cowplot::draw_label( title, 
 					  	fontfamily="main", 
 						fontface="bold",
-						colour = "#3c3f4a", 
+						colour = title_colour, 
 						size=20, 
 						hjust=0, vjust=1, 
 						x=0.02, y=0.88) +
 		cowplot::draw_label( subtitle, 
 					  	fontfamily="main", 
 						fontface="bold",
-						colour = "#3c3f4a", 
+						colour = subtitle_colour, 
 						size=12, 
 						hjust=0, vjust=1, 
 						x=0.02, y=0.40) +
@@ -60,7 +67,7 @@ decorate_plot <- function( plot,
 		cowplot::ggdraw() +
 		cowplot::draw_label( footer, 
 					  	fontfamily="main", 
-						colour = "#3c3f4a", 
+						colour = footer_colour, 
 						size=8, hjust=1, x=0.98 ) +
 		decorate_theme +
 		bg_theme

@@ -38,8 +38,8 @@ decorate_plot <- function( plot,
 	if( !is.null( bg_colour ) ) {
 
 		bg_theme <-
-			theme(	plot.background = element_rect( colour="transparent", fill=bg_colour ),
-						panel.background = element_rect( colour="transparent", fill=bg_colour ) )
+			theme(	plot.background = element_rect( colour=bg_colour, fill=bg_colour ),
+						panel.background = element_rect( colour=bg_colour, fill=bg_colour ) )
 
 	}
 
